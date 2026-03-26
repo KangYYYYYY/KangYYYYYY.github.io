@@ -455,7 +455,7 @@ $PDF_BTN
 $NAVBAR
       <div class="topbar">
         <div>
-          <h1>$PAGE_TITLE/h1>
+          <h1></h1>
           <div class="muted">$SUBTITLE</div>
         </div>
         <div class="meta">
@@ -1725,7 +1725,7 @@ def main():
     if not isinstance(tags, list):
         tags = []
     blogurl = str(meta.get("blogurl", ""))
-    subtitle = "Personal CV"
+    subtitle = ""
 
 
     # -----------------------------
