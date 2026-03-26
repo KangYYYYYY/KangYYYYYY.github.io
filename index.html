@@ -1,11 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
-    <title>Kang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kang - 学术/科研主页</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
-    <h1>Kang的个人主页</h1>
-    <h1>Hello ~ Fang</h1>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200">
+
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="font-bold text-xl tracking-tight text-blue-600">Kang</a>
+                <div class="hidden sm:flex space-x-8">
+                    <a href="#about" class="text-sm font-medium hover:text-blue-600 transition">关于我</a>
+                    <a href="#education" class="text-sm font-medium hover:text-blue-600 transition">教育背景</a>
+                    <a href="#publications" class="text-sm font-medium hover:text-blue-600 transition">学术论文</a>
+                    <a href="#projects" class="text-sm font-medium hover:text-blue-600 transition">科研项目</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 顶部个人介绍区 -->
+    <header class="pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pb-32 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- 头像（可替换真实URL） -->
+                <div
+                    class="w-48 h-48 rounded-full border-4 border-white shadow-xl overflow-hidden shrink-0 bg-slate-200 flex items-center justify-center">
+                    <i class="fa-solid fa-user-astronaut text-6xl text-slate-400"></i>
+                </div>
+                <!-- 核心信息 -->
+                <div>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
+                        Hi, I'm <span class="bg-gradient-to-r from-blue-600 to-indigo-500 gradient-text">Kang</span> 👋
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-600 mb-6 font-light">
+                        研究员 / 博士生 (Researcher / PhD Candidate) <br>
+                        研究方向：人工智能，计算机视觉，机器学习 (在此修改你的方向)
+                    </p>
+                    <!-- 社交/学术链接 -->
+                    <div class="flex gap-4">
+                        <a href="mailto:your_email@domain.com"
+                            class="p-2 border border-slate-200 rounded-lg hover:bg-blue-50 transition text-slate-600 hover:text-blue-600"
+                            title="Email">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="p-2 border border-slate-200 rounded-lg hover:bg-blue-50 transition text-slate-600 hover:text-blue-600"
+                            title="Google Scholar">
+                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                        </a>
+                        <a href="https://github.com/KangYYYYYY" target="_blank"
+                            class="p-2 border border-slate-200 rounded-lg hover:bg-slate-100 transition text-slate-600 hover:text-black"
+                            title="GitHub">
+                            <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="p-2 border border-slate-200 rounded-lg hover:bg-blue-50 transition text-slate-600 hover:text-blue-400"
+                            title="Twitter">
+                            <i class="fa-brands fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体内容 -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-20">
+
+        <!-- 关于我 -->
+        <section id="about" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-user text-blue-500"></i> 关于我 (About Me)
+            </h2>
+            <div class="prose max-w-none text-slate-600 leading-relaxed">
+                <p>
+                    简短的个人介绍写在这里。例如：我现在是XXX大学的[年级]博士生/硕士生，导师是XXX教授。此前，我在XXX大学获得了学士学位。
+                    我的主要研究兴趣包括XXX，结合XXX技术解决实际问题。我致力于通过技术驱动的创新进行前沿科学研究。
+                </p>
+                <p class="mt-4 text-blue-600 font-medium">🔔 寻找机会：我正在寻找202X年秋季的博士后/研究岗实习机会。（按需保留或删除）</p>
+            </div>
+        </section>
+
+        <!-- 教育背景 -->
+        <section id="education" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-university text-blue-500"></i> 教育背景 (Education)
+            </h2>
+            <div class="border-l-2 border-blue-200 pl-6 space-y-8 relative">
+                <!-- 经历项 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] bg-white border-2 border-blue-500 w-4 h-4 rounded-full mt-1.5">
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                        <h3 class="text-lg font-bold text-slate-800">XX大学 (University of XX)</h3>
+                        <span class="text-sm font-semibold text-slate-500">2021.09 - 至今</span>
+                    </div>
+                    <p class="text-slate-600 italic">博士/硕士，XX专业</p>
+                    <p class="text-sm text-slate-500 mt-2">导师：<a href="#"
+                            class="text-blue-500 hover:underline">XXX教授</a> | 研究方向：XXX</p>
+                </div>
+                <!-- 经历项 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] bg-white border-2 border-slate-300 w-4 h-4 rounded-full mt-1.5">
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                        <h3 class="text-lg font-bold text-slate-800">XX大学 (University of XX)</h3>
+                        <span class="text-sm font-semibold text-slate-500">2017.09 - 2021.06</span>
+                    </div>
+                    <p class="text-slate-600 italic">本科，XX专业</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 学术论文 -->
+        <section id="publications" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-book-open text-blue-500"></i> 学术论文 (Publications) <span
+                    class="text-sm font-normal text-slate-400">* 代表共同一作</span>
+            </h2>
+            <div class="space-y-6">
+                <!-- 论文项 1 -->
+                <div class="flex gap-4 group">
+                    <!-- 论文缩略图 (可选) -->
+                    <div
+                        class="hidden sm:block w-32 h-20 bg-slate-200 rounded overflow-hidden shrink-0 border border-slate-200 group-hover:border-blue-300 transition">
+                        <!-- <img src="paper1-teaser.png" alt="Teaser" class="w-full h-full object-cover"> -->
+                        <div class="w-full h-full flex items-center justify-center text-slate-400 text-xs">Teaser Image
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 leading-tight mb-1">这是一篇牛逼的顶会论文标题 (Awesome Paper
+                            Title Here)</h3>
+                        <p class="text-slate-600 mb-1">
+                            <strong>Kang*</strong>, Name Author*, Name Author, Name Author.
+                        </p>
+                        <p class="text-sm text-blue-600 font-semibold mb-2">
+                            IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024
+                        </p>
+                        <div class="flex gap-3 text-sm">
+                            <a href="#" class="text-slate-500 hover:text-blue-600"><i class="fa-solid fa-file-pdf"></i>
+                                PDF</a>
+                            <a href="#" class="text-slate-500 hover:text-blue-600"><i class="fa-brands fa-github"></i>
+                                Code</a>
+                            <a href="#" class="text-slate-500 hover:text-blue-600"><i class="fa-solid fa-globe"></i>
+                                Project Page</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 论文项 2 -->
+                <div class="flex gap-4 group">
+                    <div
+                        class="hidden sm:block w-32 h-20 bg-slate-200 rounded overflow-hidden shrink-0 border border-slate-200 transition group-hover:border-blue-300">
+                        <div class="w-full h-full flex items-center justify-center text-slate-400 text-xs">Teaser Image
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 leading-tight mb-1">另一篇具有影响力的SCI期刊标题</h3>
+                        <p class="text-slate-600 mb-1">
+                            Name Author, <strong>Kang</strong>, Name Author.
+                        </p>
+                        <p class="text-sm text-blue-600 font-semibold mb-2">
+                            IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2023
+                        </p>
+                        <div class="flex gap-3 text-sm">
+                            <a href="#" class="text-slate-500 hover:text-blue-600"><i class="fa-solid fa-file-pdf"></i>
+                                PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 科研项目 / 经历 -->
+        <section id="projects" class="scroll-mt-24">
+            <h2 class="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-flask text-blue-500"></i> 科研项目与经历 (Projects & Experience)
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- 项目卡片 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">XXX算法的研发与落地</h3>
+                    <p class="text-sm text-slate-500 mb-3">XX大厂 / XX实验室 研究实习生 | 2023.06 - 2023.09</p>
+                    <ul class="list-disc list-inside text-slate-600 text-sm space-y-1">
+                        <li>主导研发了某种新型的XXX架构，将推理速度提升了30%。</li>
+                        <li>相关代码已开源，并在公司核心业务线中成功上线。</li>
+                        <li>获得了部门"优秀实习生"称号。</li>
+                    </ul>
+                </div>
+
+                <!-- 项目卡片 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">国家自然基金青年项目：XXX课题</h3>
+                    <p class="text-sm text-slate-500 mb-3">核心参与人 | 2022.01 - 至今</p>
+                    <ul class="list-disc list-inside text-slate-600 text-sm space-y-1">
+                        <li>负责搭建实验环境和跑通Baseline。</li>
+                        <li>设计并实现了基于XXX的新型图神经网络模型。</li>
+                        <li>撰写并在顶级会议上发表论文1篇，申请发明专利1项。</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-slate-100 border-t border-slate-200 py-8 text-center text-slate-500 text-sm">
+        <p>© 2024 Kang. All Rights Reserved.</p>
+        <p class="mt-2">Inspired by minimalist themes. Built with Tailwind CSS.</p>
+    </footer>
+
 </body>
+
 </html>
