@@ -1571,8 +1571,10 @@ def bold_author_in_authors_str(authors: str, highlight: str) -> str:
 
     out = authors
 
-    # First, try exact highlight string
-    out2 = re.sub(re.escape(highlight), repl, out, flags=re.I)
+    # First, try exact highlight string with alphabetic boundaries.
+    # This avoids partial matches such as 'K. Yan' inside 'K. Yang'.
+    exact_pat = rf"(?<![A-Za-z]){re.escape(highlight)}(?![A-Za-z])"
+    out2 = re.sub(exact_pat, repl, out, flags=re.I)
     if out2 != out:
         return out2
 
