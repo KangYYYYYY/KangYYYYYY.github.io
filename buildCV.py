@@ -1571,8 +1571,10 @@ def bold_author_in_authors_str(authors: str, highlight: str) -> str:
 
     out = authors
 
-    # First, try exact highlight string
-    out2 = re.sub(re.escape(highlight), repl, out, flags=re.I)
+    # First, try exact highlight string with strict letter boundaries,
+    # so "K. Yan" won't match the prefix of "K. Yang".
+    exact_pat = rf"(?<![A-Za-z]){re.escape(highlight)}(?![A-Za-z])"
+    out2 = re.sub(exact_pat, repl, out, flags=re.I)
     if out2 != out:
         return out2
 
@@ -1595,20 +1597,6 @@ def bold_author_in_authors_str(authors: str, highlight: str) -> str:
         if out2 != out:
             return out2
         pat = rf"\b{re.escape(last)}\s*,\s*{re.escape(first[0])}\.?\b"
-        out2 = re.sub(pat, repl, out, flags=re.I)
-        if out2 != out:
-            return out2
-
-
-    # If highlight is like 'C. Luo' (initial + last), also match full first name 'Cheng Luo'
-    if len(h_toks) == 2 and len(h_toks[0]) == 1:
-        ini = re.escape(h_toks[0])
-        last = re.escape(h_toks[1])
-        pat = rf"\b{ini}[A-Za-z\-]*\s+{last}\b"
-        out2 = re.sub(pat, repl, out, flags=re.I)
-        if out2 != out:
-            return out2
-        pat = rf"\b{last}\s+{ini}[A-Za-z\-]*\b"
         out2 = re.sub(pat, repl, out, flags=re.I)
         if out2 != out:
             return out2
