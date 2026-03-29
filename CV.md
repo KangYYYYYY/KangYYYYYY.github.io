@@ -20,12 +20,12 @@ nav: [
 ---
 
 ## About me\关于
-电子科技大学信息与通信工程学院在读博士研究生
+电子科技大学信息与通信工程学院在读博士研究生 / Ph.D. Candidate at the School of Information and Communication Engineering, University of Electronic Science and Technology of China (UESTC)
 
 ## Research Interests\研究兴趣
-- 多智能体强化学习
-- 多无人机
-- 通信感知一体化
+- 多智能体强化学习 / Multi-Agent Reinforcement Learning
+- 多无人机 / Multi-UAV Systems
+- 通信感知一体化 / Integrated Sensing and Communications (ISAC)
 
 ## Selected Publications\部分成果
 - https://ieeexplore.ieee.org/document/11208810
@@ -33,4 +33,4 @@ nav: [
 
 ## Honors & Awards\荣誉
 
-- 2024 TrustCom Best Paper Award
+- 2024 TrustCom 最佳论文奖 / 2024 TrustCom Best Paper Award
