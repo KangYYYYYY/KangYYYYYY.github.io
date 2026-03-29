@@ -455,7 +455,7 @@ $PDF_BTN
 $NAVBAR
       <div class="topbar">
         <div>
-          <h1></h1>
+          <h1>Joffrey's CV</h1>
           <div class="muted">$SUBTITLE</div>
         </div>
         <div class="meta">
@@ -1571,10 +1571,8 @@ def bold_author_in_authors_str(authors: str, highlight: str) -> str:
 
     out = authors
 
-    # First, try exact highlight string with alphabetic boundaries.
-    # This avoids partial matches such as 'K. Yan' inside 'K. Yang'.
-    exact_pat = rf"(?<![A-Za-z]){re.escape(highlight)}(?![A-Za-z])"
-    out2 = re.sub(exact_pat, repl, out, flags=re.I)
+    # First, try exact highlight string
+    out2 = re.sub(re.escape(highlight), repl, out, flags=re.I)
     if out2 != out:
         return out2
 
@@ -1727,7 +1725,7 @@ def main():
     if not isinstance(tags, list):
         tags = []
     blogurl = str(meta.get("blogurl", ""))
-    subtitle = ""
+    subtitle = "Personal CV"
 
 
     # -----------------------------
