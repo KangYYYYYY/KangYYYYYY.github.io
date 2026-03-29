@@ -20,11 +20,15 @@ nav: [
 ---
 
 ## About me\关于
-电子科技大学信息与通信工程学院在读博士研究生 / Ph.D. Candidate at the School of Information and Communication Engineering, University of Electronic Science and Technology of China (UESTC)
+
+- 2022年09月 - 至今：电子科技大学信息与通信工程学院博士在读研究生
+- Sep. 2022 - Present: Ph.D. candidate at the School of Information and Communication Engineering, University of Electronic Science and Technology of China (UESTC)
+- 2018年09月 - 2022年06月：四川大学电子信息学院，本科学位
+- Sep. 2018 - Jun. 2022: Bachelor's degree at the College of Electronics and Information Engineering, Sichuan University
 
 ## Research Interests\研究兴趣
 - 多智能体强化学习 / Multi-Agent Reinforcement Learning
-- 多无人机 / Multi-UAV Systems
+- 多无人机 / Multi-UAVs
 - 通信感知一体化 / Integrated Sensing and Communications (ISAC)
 
 ## Selected Publications\部分成果
