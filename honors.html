@@ -155,14 +155,13 @@ a:hover{ text-decoration:underline; }
 .ext-content th,.ext-content td{ border:1px solid var(--line); padding:6px 8px; }
 .ext-content code{ font-family:var(--mono); font-size:12px; background:#f3f4f6; padding:2px 4px; border-radius:6px; }
 
-.topbar{
-  display:flex; justify-content:space-between; align-items:flex-start; gap:12px;
-  padding-bottom:10px; border-bottom:1px solid var(--line); margin-bottom:14px;
-}
-.topbar h1{ margin:0; font-size:22px; line-height:1.25; }
-.topbar .meta{
-  text-align:right; color:var(--muted); font-size:12px;
-  font-family:var(--mono); white-space:nowrap;
+
+.updated{
+    margin-top:10px;
+    color:var(--muted);
+    font-size:12px;
+    font-family:var(--mono);
+    text-align:right;
 }
 
 section{ padding:14px 0; border-bottom:1px dashed var(--line); }
@@ -239,7 +238,7 @@ p{ margin:8px 0; color:#374151; font-size:13px; }
 @media (max-width: 940px){
   .wrap{ grid-template-columns:1fr; }
   .sidebar{ position:relative; top:auto; }
-  .topbar .meta{ text-align:left; white-space:normal; }
+    .updated{ text-align:left; white-space:normal; }
 }
   </style>
 <script>
@@ -328,22 +327,14 @@ p{ margin:8px 0; color:#374151; font-size:13px; }
 
     <main class="card main">
 <nav class="navbar"><a class="navlink" href="index.html" target="_self">Home</a><a class="navlink" href="papers.html" target="_self">Papers</a><a class="navlink active" href="honors.html" target="_self">Honors</a></nav>
-      <div class="topbar">
-        <div>
-          <h1> </h1>
-          <div class="muted"> </div>
-        </div>
-        <div class="meta">
-          <div>Last updated: 2026-03-29</div>
-        </div>
-      </div>
-
 <section>
 <h3 class="sec-title"><span class="dot"></span>Honors &amp; Awards\荣誉</h3>
 <ul>
 <li>2024 TrustCom 最佳论文奖 / 2024 TrustCom Best Paper Award</li>
 </ul>
 </section>
+
+            <div class="updated">Last updated: 2026-03-29</div>
 
       <div class="footer">© 2026 严康 / Kang Yan</div>
     </main>

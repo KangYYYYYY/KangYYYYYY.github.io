@@ -270,14 +270,13 @@ a:hover{ text-decoration:underline; }
 .ext-content th,.ext-content td{ border:1px solid var(--line); padding:6px 8px; }
 .ext-content code{ font-family:var(--mono); font-size:12px; background:#f3f4f6; padding:2px 4px; border-radius:6px; }
 
-.topbar{
-  display:flex; justify-content:space-between; align-items:flex-start; gap:12px;
-  padding-bottom:10px; border-bottom:1px solid var(--line); margin-bottom:14px;
-}
-.topbar h1{ margin:0; font-size:22px; line-height:1.25; }
-.topbar .meta{
-  text-align:right; color:var(--muted); font-size:12px;
-  font-family:var(--mono); white-space:nowrap;
+
+.updated{
+    margin-top:10px;
+    color:var(--muted);
+    font-size:12px;
+    font-family:var(--mono);
+    text-align:right;
 }
 
 section{ padding:14px 0; border-bottom:1px dashed var(--line); }
@@ -354,7 +353,7 @@ p{ margin:8px 0; color:#374151; font-size:13px; }
 @media (max-width: 940px){
   .wrap{ grid-template-columns:1fr; }
   .sidebar{ position:relative; top:auto; }
-  .topbar .meta{ text-align:left; white-space:normal; }
+    .updated{ text-align:left; white-space:normal; }
 }
 """
 
@@ -453,17 +452,9 @@ $PDF_BTN
 
     <main class="card main">
 $NAVBAR
-      <div class="topbar">
-        <div>
-          <h1> </h1>
-          <div class="muted">$SUBTITLE</div>
-        </div>
-        <div class="meta">
-          <div>Last updated: $UPDATED</div>
-        </div>
-      </div>
-
 $SECTIONS
+
+            <div class="updated">Last updated: $UPDATED</div>
 
       <div class="footer">© $YEAR $NAME</div>
     </main>
