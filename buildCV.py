@@ -455,7 +455,7 @@ $PDF_BTN
 $NAVBAR
       <div class="topbar">
         <div>
-          <h1>Joffrey's CV</h1>
+          <h1> </h1>
           <div class="muted">$SUBTITLE</div>
         </div>
         <div class="meta">
