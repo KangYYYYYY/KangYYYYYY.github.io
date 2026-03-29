@@ -572,7 +572,10 @@ def as_bool(v, default: bool = False) -> bool:
 
 
 def render_simple_md(md: str) -> str:
-    """Only paragraphs + unordered list (- item)."""
+    """Only paragraphs + unordered list (- item).
+
+    Supports indented continuation lines inside the previous list item.
+    """
     lines = md.replace("\r\n", "\n").replace("\r", "\n").split("\n")
     out: List[str] = []
     in_ul = False
@@ -594,6 +597,12 @@ def render_simple_md(md: str) -> str:
                 out.append("<ul>")
                 in_ul = True
             out.append("<li>{}</li>".format(esc(m.group(1).strip())))
+            continue
+
+        # Treat indented non-bullet lines as continuation text in the last <li>.
+        if in_ul and re.match(r"^\s+\S", line) and out and out[-1].startswith("<li>") and out[-1].endswith("</li>"):
+            extra = esc(line.strip())
+            out[-1] = out[-1][:-5] + "<br>" + extra + "</li>"
             continue
 
         close_ul()
@@ -1725,7 +1734,7 @@ def main():
     if not isinstance(tags, list):
         tags = []
     blogurl = str(meta.get("blogurl", ""))
-    subtitle = "Personal CV"
+    subtitle = " "
 
 
     # -----------------------------
