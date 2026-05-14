@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimART | 6G ISAC Research Highlight</title>
+    <meta
+      name="description"
+      content="SimART: A unified and open real-world multimodal simulation platform for 6G integrated sensing and communication."
+    />
+    <link rel="stylesheet" href="styles.css?v=20260512d" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="main-nav" aria-label="Primary navigation">
+        <div class="nav-left">
+          <a class="brand" href="#top" aria-label="SimART homepage">
+            <span class="brand-mark">S</span>
+            <span>SimART</span>
+          </a>
+          <button class="language-toggle" type="button" aria-label="Switch language" data-lang="zh">中文</button>
+        </div>
+        <div class="nav-links">
+          <a href="#overview" data-i18n="navOverview">Overview</a>
+          <a href="#architecture" data-i18n="navArchitecture">Architecture</a>
+          <a href="#developers" data-i18n="navDevelopers">Developers</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <canvas class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-atmosphere" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <h1 id="hero-title">SimART</h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            A Unified and Open Real-world Multimodal Simulation Platform for 6G Integrated Sensing and Communication
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/guchuanv-alt/SimART" data-i18n="heroCode">Code</a>
+            <a
+              class="button secondary paper-link"
+              href="./SimART__A_Unified_and_Open_Real_world_Multimodal_Simulation_Platform_for_6G_Integrated_Sensing_and_Communication%20(1).pdf"
+              data-paper-url="./SimART__A_Unified_and_Open_Real_world_Multimodal_Simulation_Platform_for_6G_Integrated_Sensing_and_Communication%20(1).pdf"
+              data-i18n="heroPaper">Paper</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="article-layout">
+        <aside class="paper-meta" aria-label="Paper metadata">
+          <p class="meta-label" data-i18n="metaLabel">Article</p>
+          <dl>
+            <div>
+              <dt data-i18n="metaAuthors">Authors</dt>
+              <dd>Kang Yan, Yuqi Cao, Jiaqi Li, Luping Xiang, Kun Yang</dd>
+            </div>
+            <div>
+              <dt data-i18n="metaTopic">Topic</dt>
+              <dd>6G ISAC, multimodal simulation, wireless channels</dd>
+            </div>
+            <div>
+              <dt data-i18n="metaSource">Open Source</dt>
+              <dd><a href="https://github.com/guchuanv-alt/SimART">github.com/guchuanv-alt/SimART</a></dd>
+            </div>
+            <div>
+              <dt data-i18n="metaPaper">Paper</dt>
+              <dd><a class="paper-link" href="./SimART__A_Unified_and_Open_Real_world_Multimodal_Simulation_Platform_for_6G_Integrated_Sensing_and_Communication%20(1).pdf" data-paper-url="./SimART__A_Unified_and_Open_Real_world_Multimodal_Simulation_Platform_for_6G_Integrated_Sensing_and_Communication%20(1).pdf" data-i18n="metaPaperLink">Download PDF</a></dd>
+            </div>
+          </dl>
+        </aside>
+
+        <article class="article-main">
+          <p class="section-kicker" data-i18n="researchKicker">Research Brief</p>
+          <h2 data-i18n="researchTitle">From "Tool Tinkering" to a Unified Simulation Pipeline</h2>
+          <p class="lead" data-i18n="researchLead">
+            6G ISAC demands visual, LiDAR, IMU, GPS, and wireless data in one pipeline — but existing simulators each cover only half the problem.
+          </p>
+          <p data-i18n="researchBody">
+            SimART bridges the gap with ROS: a shared clock and coordinate frame connect AirSim, Sionna RT/SYS, and CKM generation. A full session is recorded as one rosbag file.
+          </p>
+          <div class="highlight-grid">
+            <div>
+              <h3 data-i18n="contrib1Title">Platform Contribution</h3>
+              <p data-i18n="contrib1Body">Connects physical sensing, ray tracing, PHY/MAC wireless evaluation, and CKM construction into a modular workflow.</p>
+            </div>
+            <div>
+              <h3 data-i18n="contrib2Title">Data Contribution</h3>
+              <p data-i18n="contrib2Body">All sensor streams, channels, KPIs, and beam labels share a common clock and coordinate frame — ideal for multimodal learning.</p>
+            </div>
+            <div>
+              <h3 data-i18n="contrib3Title">Scenario Contribution</h3>
+              <p data-i18n="contrib3Body">Supports real OpenStreetMap maps and user-defined layouts, generating both visual and electromagnetic assets.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="band">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="problemKicker">Problem Context</p>
+          <h2 data-i18n="problemTitle">Key Gaps in ISAC Dataset Generation</h2>
+        </div>
+        <div class="comparison">
+          <div class="comparison-item">
+            <span class="item-index">01</span>
+            <h3 data-i18n="prob1Title">Robotic Simulators</h3>
+            <p data-i18n="prob1Body">CARLA, AirSim, Gazebo, and Isaac Sim handle 3D physics, cameras, LiDAR, and platform motion, but wireless propagation and link evaluation are limited.</p>
+          </div>
+          <div class="comparison-item">
+            <span class="item-index">02</span>
+            <h3 data-i18n="prob2Title">Wireless Simulation Tools</h3>
+            <p data-i18n="prob2Body">Sionna RT/SYS, DeepMIMO, and Wireless InSite excel at channel and link analysis, but lack onboard sensor and closed-loop robot motion capabilities.</p>
+          </div>
+          <div class="comparison-item strong">
+            <span class="item-index">03</span>
+            <h3>SimART</h3>
+            <p data-i18n="prob3Body">Combines mature tools through ROS contracts so the same backend can serve aerial, ground, indoor, and maritime ISAC scenarios.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="architecture" class="content-section">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="archKicker">Architecture</p>
+          <h2 data-i18n="archTitle">ROS as the Spatio-Temporal Backbone</h2>
+          <p data-i18n="archBody">
+            Four modules — physics & sensing, ray tracing, link evaluation, and CKM — exchange data over standard ROS topics and custom SimART messages.
+          </p>
+        </div>
+        <figure class="paper-figure">
+          <img src="SystemArchitecture.svg" alt="SimART platform architecture with physics, ray tracing, link system, CKM generator and rosbag dataset outputs" />
+          <figcaption data-i18n="archCaption">Architecture of SimART and the resulting multimodal ISAC dataset.</figcaption>
+        </figure>
+
+        <div class="module-grid">
+          <section>
+            <h3 data-i18n="mod1Title">Physics and Sensing</h3>
+            <p data-i18n="mod1Body">Publishes platform pose, RGB/Depth/Semantic images, LiDAR point cloud, IMU, GPS, and ground truth.</p>
+          </section>
+          <section>
+            <h3 data-i18n="mod2Title">Ray Tracing</h3>
+            <p data-i18n="mod2Body">Computes propagation paths, CIR, delay, angle, and Doppler using spatially aligned simplified meshes.</p>
+          </section>
+          <section>
+            <h3 data-i18n="mod3Title">Link and System</h3>
+            <p data-i18n="mod3Body">Evaluates SINR, BLER, achievable rate, and optimal beam index via Sionna SYS.</p>
+          </section>
+          <section>
+            <h3 data-i18n="mod4Title">CKM Generator</h3>
+            <p data-i18n="mod4Body">Scans channel and link metrics across grid positions to produce multi-layer channel knowledge maps.</p>
+          </section>
+        </div>
+      </section>
+
+      <section class="split-section">
+        <div class="split-copy">
+          <p class="section-kicker" data-i18n="sceneKicker">Scene Construction</p>
+          <h2 data-i18n="sceneTitle">One Scene, Two Asset Sets</h2>
+          <p data-i18n="sceneBody">
+            Visual and electromagnetic assets are built separately but share a single coordinate frame, keeping observations aligned with propagation paths.
+          </p>
+          <ul class="clean-list">
+            <li data-i18n="sceneLi1">Real regions: extract roads, buildings, and geographic elements from OpenStreetMap.</li>
+            <li data-i18n="sceneLi2">Custom layouts: construct controlled scenes via RoadRunner, Unreal Engine, or custom meshes.</li>
+            <li data-i18n="sceneLi3">EM conversion: apply geometry simplification, edge preservation, and material assignment with Blender scripts.</li>
+          </ul>
+        </div>
+        <div class="scene-gallery" aria-label="Scene construction visuals">
+          <figure>
+            <img src="assets/simart-039.png" alt="AirSim rendered urban campus scene" />
+            <figcaption data-i18n="sceneCap1">High-fidelity visual scene</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/simart-040.png" alt="Simplified ray-tracing mesh for electromagnetic simulation" />
+            <figcaption data-i18n="sceneCap2">Simplified RT mesh</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="dataset" class="content-section">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="dataKicker">Multimodal Dataset</p>
+          <h2 data-i18n="dataTitle">One Simulation, One Complete Recording</h2>
+          <p data-i18n="dataBody">
+            Modules publish under a shared clock; rosbag captures everything in one session, fully compatible with ROS tools — rviz, rqt bag, SLAM, and perception pipelines.
+          </p>
+        </div>
+        <div class="data-gallery">
+          <figure>
+            <img src="assets/simart-046.png" alt="RGB image captured from UAV flight" />
+            <figcaption data-i18n="dataCap1">RGB image of UAV motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/simart-049.png" alt="Depth map captured from UAV flight" />
+            <figcaption data-i18n="dataCap2">Depth map of UAV motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/simart-047.png" alt="LiDAR point cloud captured in the urban environment" />
+            <figcaption data-i18n="dataCap3">LiDAR point cloud stream</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/simart-048.png" alt="Semantic segmentation captured from UAV flight" />
+            <figcaption data-i18n="dataCap4">Semantic segmentation of UAV motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/simart-051.png" alt="Ray tracing paths between base station and receivers" />
+            <figcaption data-i18n="dataCap5">Ray-traced propagation paths</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="ckmKicker">Channel Knowledge Map</p>
+          <h2 data-i18n="ckmTitle">Turning Channel Statistics into Spatial Priors</h2>
+          <p data-i18n="ckmBody">
+            The CKM generator grids the region, computing per-cell channel statistics and link metrics as spatial priors for ISAC learning.
+          </p>
+        </div>
+        <div class="ckm-grid">
+          <figure>
+            <img src="assets/simart-052.png" alt="Dense CKM path loss map" />
+            <figcaption data-i18n="ckmCap1">Path loss</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/simart-053.png" alt="Dense CKM received power map" />
+            <figcaption data-i18n="ckmCap2">Received power</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/simart-054.png" alt="Dense CKM best base station rate map" />
+            <figcaption data-i18n="ckmCap3">Achievable rate</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/simart-055.png" alt="Dense CKM effective SINR map" />
+            <figcaption data-i18n="ckmCap4">Effective SINR</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="usecase-band">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="valueKicker">Research Value</p>
+          <h2 data-i18n="valueTitle">Cross-Scenario ISAC Algorithm Validation</h2>
+        </div>
+        <div class="usecase-grid">
+          <div>
+            <h3 data-i18n="use1Title">Aerial ISAC</h3>
+            <p data-i18n="use1Body">Sensing-assisted communication for UAVs, low-altitude economy, and urban air mobility.</p>
+          </div>
+          <div>
+            <h3 data-i18n="use2Title">Connected Driving</h3>
+            <p data-i18n="use2Body">Joint sensing, localization, and beam management for autonomous driving and V2X.</p>
+          </div>
+          <div>
+            <h3 data-i18n="use3Title">Indoor Robotics</h3>
+            <p data-i18n="use3Body">Coupled connectivity and sensing for factory and warehouse robots in rich multipath.</p>
+          </div>
+          <div>
+            <h3 data-i18n="use4Title">Maritime ISAC</h3>
+            <p data-i18n="use4Body">Swap the front-end simulator while reusing the back-end wireless and CKM generation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="developers" class="content-section developers-section">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="devKicker">Project Credits</p>
+          <h2 data-i18n="devTitle">Developers</h2>
+        </div>
+
+        <div class="dev-block">
+          <h3 data-i18n="devTechTitle">Technical Development</h3>
+          <div class="dev-core-grid dev-grid-three">
+            <div class="dev-card">
+              <p class="dev-name">Yuqi Cao</p>
+              <p class="dev-role" data-i18n="devRole1">Core Developer / Module Development</p>
+              <p class="dev-affil">University of Electronic Science and Technology of China</p>
+            </div>
+            <div class="dev-card">
+              <p class="dev-name">Kang Yan</p>
+              <p class="dev-role" data-i18n="devRole2">Core Developer / Architecture Design</p>
+              <p class="dev-affil">University of Electronic Science and Technology of China</p>
+            </div>
+            <div class="dev-card">
+              <p class="dev-name">Jiaqi Li</p>
+              <p class="dev-role" data-i18n="devRole3">Developer / Model Modeling</p>
+              <p class="dev-affil">Nanjing University</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-block">
+          <h3 data-i18n="devAdvisorTitle">Advisors</h3>
+          <div class="dev-core-grid">
+            <div class="dev-card">
+              <p class="dev-name">Kun Yang</p>
+              <p class="dev-role" data-i18n="devRole4">Project Advisor</p>
+              <p class="dev-affil">Nanjing University</p>
+            </div>
+            <div class="dev-card">
+              <p class="dev-name">Luping Xiang</p>
+              <p class="dev-role" data-i18n="devRole5">Project Advisor</p>
+              <p class="dev-affil">Nanjing University</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="resources" class="site-footer">
+      <div class="footer-links">
+        <a href="https://github.com/guchuanv-alt/SimART" data-i18n="footerCode">Source Code</a>
+        <a
+          class="paper-link"
+          href="./SimART__A_Unified_and_Open_Real_world_Multimodal_Simulation_Platform_for_6G_Integrated_Sensing_and_Communication%20(1).pdf"
+          data-paper-url="./SimART__A_Unified_and_Open_Real_world_Multimodal_Simulation_Platform_for_6G_Integrated_Sensing_and_Communication%20(1).pdf"
+          data-i18n="footerPaper">Paper PDF</a
+        >
+        <a href="#top" data-i18n="footerTop">Back to top</a>
+      </div>
+    </footer>
+
+    <div class="modal-overlay" id="comingSoonModal" aria-hidden="true">
+      <div class="modal-box">
+        <p data-i18n="comingSoon">Coming Soon</p>
+        <button class="modal-close" aria-label="Close">&times;</button>
+      </div>
+    </div>
+
+    <script src="script.js?v=20260512d"></script>
+  </body>
+</html>

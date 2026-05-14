@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:ise.nju.edu.cn)",
+      "Bash(ffprobe \"d:\\\\CloudData\\\\OneDrive\\\\个人资料\\\\个人主页\\\\KangYYYYYY.github.io\\\\simart\\\\pic\\\\jiaqili.jpg\")",
+      "Bash(Select-String \"Stream|Dimension|width|height\")"
+    ]
+  }
+}
