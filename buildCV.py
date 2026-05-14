@@ -389,6 +389,8 @@ p{ margin:8px 0; color:#374151; font-size:13px; }
 
 .footer{ margin-top:10px; color:var(--muted); font-size:12px; text-align:center; }
 .page-counter{
+  display:block !important;
+  width:100%;
   margin-top:8px;
   color:var(--muted);
   font-size:12px;
@@ -404,7 +406,7 @@ p{ margin:8px 0; color:#374151; font-size:13px; }
   .wrap{ grid-template-columns:1fr; }
   .sidebar{ position:relative; top:auto; }
     .updated{ text-align:left; white-space:normal; }
-    .page-counter{ text-align:left; }
+    .page-counter{ text-align:right; }
 }
 """
 
