@@ -10,7 +10,7 @@ const i18n = {
     heroPaper: "Paper",
     heroVideo: "Bilibili",
 
-    metaLabel: "Article",
+    metaLabel: "Paper",
     metaAuthors: "Authors",
     metaTopic: "Topic",
     metaSource: "Open Source",
@@ -150,7 +150,7 @@ const i18n = {
     heroPaper: "论文",
     heroVideo: "哔哩哔哩",
 
-    metaLabel: "文章",
+    metaLabel: "论文",
     metaAuthors: "作者",
     metaTopic: "主题",
     metaSource: "开源地址",
