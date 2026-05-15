@@ -8,6 +8,7 @@ const i18n = {
       "A Unified and Open Real-world Multimodal Simulation Platform for 6G Integrated Sensing and Communication",
     heroCode: "Code",
     heroPaper: "Paper",
+    heroVideo: "Bilibili",
 
     metaLabel: "Article",
     metaAuthors: "Authors",
@@ -15,6 +16,8 @@ const i18n = {
     metaSource: "Open Source",
     metaPaper: "Paper",
     metaPaperLink: "arxiv.org/abs/2605.13309",
+    metaVideo: "Bilibili",
+    metaVideoLink: "bilibili.com/video/BV12e5R6BEqV",
 
     researchKicker: "Research Brief",
     researchTitle: "From \"Tool Tinkering\" to a Unified Simulation Pipeline",
@@ -127,8 +130,9 @@ const i18n = {
 
     footerNote:
       "Based on the manuscript content provided in this workspace. This is an independent promotional page, not an official IEEE publication page.",
-    footerCode: "Source Code",
+    footerCode: "Code",
     footerPaper: "Paper",
+    footerVideo: "Bilibili",
     footerTop: "Back to top",
     footerUpdated: "Last updated",
     footerPageViews: "SimART page views",
@@ -144,6 +148,7 @@ const i18n = {
       "面向6G通感一体化的统一开源真实世界多模态仿真平台",
     heroCode: "代码",
     heroPaper: "论文",
+    heroVideo: "哔哩哔哩",
 
     metaLabel: "文章",
     metaAuthors: "作者",
@@ -151,6 +156,8 @@ const i18n = {
     metaSource: "开源地址",
     metaPaper: "论文",
     metaPaperLink: "arxiv.org/abs/2605.13309",
+    metaVideo: "哔哩哔哩",
+    metaVideoLink: "bilibili.com/video/BV12e5R6BEqV",
 
     researchKicker: "研究简介",
     researchTitle: "从\"拼工具\"到\"统一仿真管线\"",
@@ -262,8 +269,9 @@ const i18n = {
 
     footerNote:
       "基于本工作区中的稿件内容生成。此为独立宣传页面，非 IEEE 官方出版页面。",
-    footerCode: "源代码",
+    footerCode: "代码",
     footerPaper: "论文",
+    footerVideo: "哔哩哔哩",
     footerTop: "返回顶部",
     footerUpdated: "最后更新",
     footerPageViews: "SimART 页面访问量",

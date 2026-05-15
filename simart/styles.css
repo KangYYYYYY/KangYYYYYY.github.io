@@ -238,14 +238,20 @@ img {
   justify-content: center;
   min-height: 44px;
   padding: 0 18px;
+  border: 1px solid transparent;
   border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
   font-weight: 800;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .button.primary {
   color: #ffffff;
   background: var(--red);
+  border-color: var(--red);
 }
 
 .button.secondary {
